@@ -8,13 +8,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useAuth } from "@/contexts/AuthContext";
 import { Brain, Mail, Lock, ArrowLeft, Loader2, User } from "lucide-react";
 import { toast } from "sonner";
-import { z } from "zod";
-
-const authSchema = z.object({
-  email: z.string().email("Please enter a valid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-  username: z.string().min(3, "Username must be at least 3 characters").optional(),
-});
 
 export default function Auth() {
   const [searchParams] = useSearchParams();
@@ -37,13 +30,20 @@ export default function Auth() {
     setIsLoading(true);
 
     // Validate inputs
-    const validation = authSchema.safeParse({ 
-      email, 
-      password, 
-      username: isSignUp ? username : undefined 
-    });
-    if (!validation.success) {
-      toast.error(validation.error.errors[0].message);
+    if (!email || !email.includes('@')) {
+      toast.error("Please enter a valid email address");
+      setIsLoading(false);
+      return;
+    }
+    
+    if (password.length < 6) {
+      toast.error("Password must be at least 6 characters");
+      setIsLoading(false);
+      return;
+    }
+    
+    if (isSignUp && (!username || username.length < 3)) {
+      toast.error("Username must be at least 3 characters");
       setIsLoading(false);
       return;
     }
