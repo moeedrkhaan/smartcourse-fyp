@@ -64,7 +64,7 @@ npm run dev
 
 ### Accessing the Application
 
-- Frontend: http://localhost:5173
+- Frontend: http://localhost:8080
 - Backend API: http://localhost:5000
 
 ## Important Notes
