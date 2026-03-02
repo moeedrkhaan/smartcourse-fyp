@@ -138,4 +138,3 @@ For detailed information, see:
 - [SETUP_GUIDE.md](SETUP_GUIDE.md) - Complete setup instructions
 - [ARCHITECTURE.md](ARCHITECTURE.md) - System architecture details
 - [IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md) - Implementation overview
-- [QUICK_REFERENCE.md](QUICK_REFERENCE.md) - Quick reference card
