@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Lock files (use npm/package-lock.json only)
+bun.lockb
+yarn.lock
+pnpm-lock.yaml
+
 # Python
 __pycache__/
 *.py[cod]
