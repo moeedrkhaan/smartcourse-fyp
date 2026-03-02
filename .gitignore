@@ -16,26 +16,6 @@ dist-ssr
 .env
 backend/.env
 
-# Python
-backend/venv/
-backend/__pycache__/
-**/__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.so
-*.egg
-*.egg-info/
-dist/
-build/
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
-backend/smartcourse.db
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
