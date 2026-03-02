@@ -12,6 +12,16 @@ dist
 dist-ssr
 *.local
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/venv/
+backend/smartcourse.db
+*.db
+
 # Environment variables
 .env
 backend/.env
