@@ -1,0 +1,23 @@
+node_modules
+dist
+
+# Python virtual environments
+venv
+backend/venv
+.venv
+backend/.venv
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Environment files
+.env
+backend/.env
+
+# Local databases
+*.db
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
